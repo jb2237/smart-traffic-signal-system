@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Input</title>
+</head>
+<body>
+
+<h2>Enter Traffic Details</h2>
+
+<form action="/optimize" method="post">
+
+    <p>Number of vehicles in each lane:</p>
+
+    Lane 1: <input type="number" name="lane0"  min="0" step="1" required><br><br>
+    Lane 2: <input type="number" name="lane1"  min="0" step="1"required><br><br>
+    Lane 3: <input type="number" name="lane2"  min="0" step="1" required><br><br>
+    Lane 4: <input type="number" name="lane3" min="0" step="1" required><br><br>
+
+    <p>Emergency Vehicle Present?</p>
+    <select name="emergency_lane">
+        <option value="-1">No Emergency</option>
+        <option value="1">Lane 1</option>
+        <option value="2">Lane 2</option>
+        <option value="3">Lane 3</option>
+        <option value="4">Lane 4</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Optimize Signal</button>
+
+</form>
+
+</body>
+</html>
